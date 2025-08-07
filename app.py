@@ -10,7 +10,7 @@ if not os.getenv("HF_API_KEY"):
 llm = HuggingFaceEndpoint(
     repo_id="openai/gpt-oss-20b",
     task="text-generation",
-    huggingfacehub_api_token= os.dotenv.get("HF_API_KEY")
+    huggingfacehub_api_token= os.getenv("HF_API_KEY")
 )
 
 model = ChatHuggingFace(llm=llm)
