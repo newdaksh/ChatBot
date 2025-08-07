@@ -21,4 +21,4 @@ def chat(message, history):
     return response.content
 
 # Launch Gradio Chat UI
-gr.ChatInterface(fn=chat, type="messages").launch()
+gr.ChatInterface(fn=chat, type="messages").launch(server_name="0.0.0.0", server_port=port)
